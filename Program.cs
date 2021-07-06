@@ -59,3 +59,9 @@ namespace UC_1_SnakeAndLadderPlayedAtPosition0
      }
 }
 
+static void Main(string[] args)
+        	{
+           	       UC_5_ExactWinningPosition obj3 = new UC_5_ExactWinningPosition();
+                   obj3.exactWinPosition();
+		    } 
+
