@@ -12,26 +12,26 @@ namespace UC_1_SnakeAndLadderPlayedAtPosition0
             int position = 0, ladderCount = 0, snakeCount = 0;
             Console.WriteLine("Snake And Ladeer Game ");
             Random random = new Random();
-            int player = random.Next(0, 7);
+            int player = random.Next(0, 6) + 1;
             Console.WriteLine("Outcome is : " + player);
             Random random1 = new Random();
-            int option = random1.Next(0, 3);
             //Winning Condition 
             while (position!=100)
             {
+                int option = random1.Next(1, 3) + 1;
                 switch (option)
                 {
-                    case 0:
+                    case 1:
                         Console.WriteLine("your current position : " +position);
                         Console.WriteLine("you stay in same position : " +position);
                         break;
-                    case 1:
+                    case 2:
                         ladderCount++;
                         Console.WriteLine("current poition is : " +position);
                         position = position + player;
                         Console.WriteLine("Player ladder moves ahead : " +position );
                         break;
-                    case 2:
+                    case 3:
                         snakeCount++;
                         Console.WriteLine("Current position is : " +position);
                         position = position - player;
@@ -47,7 +47,8 @@ namespace UC_1_SnakeAndLadderPlayedAtPosition0
                 }
 
             }
-        }
+        } 
+
     }
 }
 
