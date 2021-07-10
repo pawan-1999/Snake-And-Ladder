@@ -6,27 +6,27 @@ namespace UC_1_SnakeAndLadderPlayedAtPosition0
 {
     class UC_5_ExactWinningPosition
     {
-        public const int POSITION = 0;
+       ublic const int POSITION = 0;
         public const int WINNING_POSITION = 100;
         public void exactWinPosition()
         {
             int position = 0;
+            Random random = new Random();
+            Random random1 = new Random();
             Console.WriteLine("Snake And Ladder Game ");
             while (position != WINNING_POSITION)
             {
-                Random random = new Random();
-                int player = random.Next(0, 7);
+                int player = random.Next(0, 6) +1;
                 Console.WriteLine("Outcomes is : " +player);
-                Random random1 = new Random();
-                int option = random1.Next(0, 3);
-                switch (position)
+                int option = random1.Next(1, 3) + 1;
+                switch (option)
                 {
-                    case 0:
+                    case 1:
                         Console.WriteLine("Current position is: " +position);
                         Console.WriteLine("You stay in same position: " +position);
                         
                         break;
-                    case 1:
+                    case 2:
                         Console.WriteLine("Your current position is:" +position);
                         Console.WriteLine("You encountered a ladder");
                         if ((position+player) > 100)
@@ -39,7 +39,7 @@ namespace UC_1_SnakeAndLadderPlayedAtPosition0
                             Console.WriteLine("Player ladder moves ahead:" +position);
                         }
                         break;
-                    case 2:
+                    case 3:
                         Console.WriteLine("You encountered a Snake");
                         Console.WriteLine("Current position is:" +position);
                         if (position < 0)
