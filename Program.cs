@@ -19,9 +19,9 @@ namespace UC_1_SnakeAndLadderPlayedAtPosition0
             int position = 0;
 
             Random random = new Random();
-            int player = random.Next(0, 7);
+            int player = random.Next(0, 6) + 1;
             Random random1 = new Random();
-            int option = random1.Next(0, 3);
+            int option = random1.Next(1, 3) + 1;
 
             Console.WriteLine("Snake And Ladder Game");
             while (dieCountForPlayer1 != WINNING_POSITION && dieCountForPlayer2 != WINNING_POSITION)
@@ -29,10 +29,10 @@ namespace UC_1_SnakeAndLadderPlayedAtPosition0
                 dieCountForPlayer1++;
                 switch (option)
                 {
-                    case 0:
+                    case 1:
                         Console.WriteLine("Player stay at the same position");
                         break;
-                    case 1:
+                    case 2:
                         Console.WriteLine("Your current position is:" + position);
                         Console.WriteLine("You encountered a ladder");
                         if ((position + player) > 100)
@@ -45,7 +45,7 @@ namespace UC_1_SnakeAndLadderPlayedAtPosition0
                             Console.WriteLine("Player ladder moves ahead:" + position);
                         }
                         break;
-                    case 2:
+                    case 3:
                         if (position > player)
                         {
                             position = position - player;
@@ -57,10 +57,10 @@ namespace UC_1_SnakeAndLadderPlayedAtPosition0
                 dieCountForPlayer2++;
                 switch (option)
                 {
-                    case 0:
+                    case 1:
                         Console.WriteLine("Player stay at the same position");
                         break;
-                    case 1:
+                    case 2:
                         Console.WriteLine("Your current position is:" + position);
                         Console.WriteLine("You encountered a ladder");
                         if ((position + player) > 100)
@@ -73,7 +73,7 @@ namespace UC_1_SnakeAndLadderPlayedAtPosition0
                             Console.WriteLine("Player ladder moves ahead:" + position);
                         }
                         break;
-                    case 2:
+                    case 3:
                         if (position > player)
                         {
                             position = position - player;
