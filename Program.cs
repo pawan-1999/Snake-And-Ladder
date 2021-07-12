@@ -23,7 +23,7 @@ namespace UC_1_SnakeAndLadderPlayedAtPosition0
         {
             Console.WriteLine("Snake And Ladder");
             Random random = new Random();
-            int player = random.Next(0, 7);
+            int player = random.Next(0, 6) + 1 ;
             Console.WriteLine("Outcome is : "+player);
         }
     }
